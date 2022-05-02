@@ -18,10 +18,20 @@ public class Carro
         return Math.round((this.capCombustiveis * this.consCombustiveis));
     }
 
-    public double verificaEcoDesempenho(double indice){
+    public double verificaEcoDesempenho(){
         double eco = this.calculaAutonomia()/this.numPassageiro;
         return Math.round(eco);
     }
+
+    public boolean validaEcoDesempenho(double indice){
+        if(this.verificaEcoDesempenho()>indice){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    // Você deverá entregar um boolean no código principal, e como desafio deverá traduzir este boolean em
+    //Eco eficiênte ou Não é eco eficiêncte.
     //#endregion
 
 }
