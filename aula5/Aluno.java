@@ -20,12 +20,21 @@ public class Aluno extends Pessoa{
     //#endregion
 
     //#region Regras de Negócios
-    public double calculaMedia(){
-        return 0;
+    private double calculaMedia(){
+        double media=0;
+        for(int i=0; i<this.notas.length;i++){
+            media+=notas[i];
+        }
+        return (media/notas.length);
     }
 
     public boolean verificaAprovacao(){
         return true;
+    }
+
+    public String montaBoletim(){
+        String boletim="Nome do Aluno: "+super.getNome();
+        return boletim;
     }
     //#endregion
 }
