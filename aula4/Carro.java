@@ -17,6 +17,11 @@ public class Carro
     public double calculaAutonomia(){
         return Math.round((this.capCombustiveis * this.consCombustiveis));
     }
+
+    public double verificaEcoDesempenho(double indice){
+        double eco = this.calculaAutonomia()/this.numPassageiro;
+        return Math.round(eco);
+    }
     //#endregion
 
 }
