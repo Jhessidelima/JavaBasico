@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class programa {
     public static void main(String[] args) {
-        Scanner entrada =  new Scanner(System.in);
         Aluno a1 = new Aluno();
         Professor p1 = new Professor();
 

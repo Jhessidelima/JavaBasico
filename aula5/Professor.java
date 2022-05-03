@@ -23,6 +23,7 @@ public class Professor extends Pessoa{
     private double calculaSalario(){
         return Math.round((this.salario * 44)*4.5);
     }
+    
     public String montaHolerite(){
         String holerite;
         holerite=("Nome do Funcionario: "+super.getNome())+System.lineSeparator();
