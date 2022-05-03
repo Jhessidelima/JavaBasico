@@ -28,12 +28,28 @@ public class Aluno extends Pessoa{
         return (media/notas.length);
     }
 
-    public boolean verificaAprovacao(){
-        return true;
+    private boolean verificaAprovacao(){
+        double media = this.calculaMedia();
+        if(media >= 7){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public String montaBoletim(){
-        String boletim="Nome do Aluno: "+super.getNome();
+        String boletim="Nome do Aluno: "+super.getNome()+System.lineSeparator();
+        if(this.verificaAprovacao() == false){
+            boletim+=(System.lineSeparator()+
+            "Devido a políticas da academia, o boletim está indisponível on-line.");
+        }else{
+            boletim+=("CPF: "+super.getCpf()+System.lineSeparator()+System.lineSeparator());
+            for(int i=0;i<this.notas.length;i++){
+                boletim+=((i+1)+" avaliação: "+this.notas[i]+" | "+System.lineSeparator());
+            }
+            boletim+=("Resultado: Aprovado."+System.lineSeparator());
+            boletim+=("Media Final: "+this.calculaMedia()+System.lineSeparator());
+        }
         return boletim;
     }
     //#endregion

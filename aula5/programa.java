@@ -19,9 +19,10 @@ public class programa {
         a1.setTelefone("(085)997852356");
         a1.setCpf("524.214.16.-04");
         a1.setCurso("Java Spring");
-        double[] notas = {7.5,9.5,7.5,6.3};
+        double[] notas = {3.5,4.5,5.5,6.3};
         a1.setNotas(notas);
 
         System.out.println(p1.montaHolerite());
+        System.out.println(a1.montaBoletim());
     }
 }
