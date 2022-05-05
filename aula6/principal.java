@@ -21,7 +21,7 @@ public class principal {
         System.out.println(d.getA()+"x^2 "+d.getB()+"x "+d.getC()+" = 0");
         
         System.out.println("Delta= "+dlt);
-        System.out.println("X| = "+xp.calculaXpositivo(a, b, c, dlt));
-        System.out.println("X||= "+xn.calculaXnegativo(a, b, c, dlt));
+        System.out.println("X| = "+xp.calculaXpositivo(d));
+        System.out.println("X||= "+xn.calculaXnegativo(d));
     }
 }
