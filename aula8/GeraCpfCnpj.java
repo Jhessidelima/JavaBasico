@@ -1,5 +1,3 @@
-package aula8;
-
 import java.util.InputMismatchException;
 
 public class GeraCpfCnpj {

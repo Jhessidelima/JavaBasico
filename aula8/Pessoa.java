@@ -7,7 +7,7 @@ public class Pessoa {
     //#region Construtores
     public Pessoa(TipoDocumento tipoDocumento, String numeroDocumento) {
         super();
-        TipoDocumento = tipoDocumento;
+        this.tipoDocumento = tipoDocumento;
         this.numeroDocumento = numeroDocumento;
     }
 
@@ -32,6 +32,13 @@ public class Pessoa {
 
     public void setNumeroDocumento(String numeroDocumento) {
         this.numeroDocumento = numeroDocumento;
+    }
+    //#endregion
+
+    //#region toString Class com Notação
+    @Override
+    public String toString() {
+        return "Pessoa [numeroDocumento=" + numeroDocumento + ", tipoDocumento=" + tipoDocumento + "]";
     }
     //#endregion
 }

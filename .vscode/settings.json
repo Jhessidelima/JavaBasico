@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "aula7",
         "aula6",
-        "aula7"
+        "aula8"
     ]
 }
