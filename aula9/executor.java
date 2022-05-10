@@ -1,7 +1,10 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class executor {
     public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
 
         Aluno a1 = new Aluno();
 
@@ -14,8 +17,10 @@ public class executor {
         System.out.println(ts.b);
         System.out.println(ts.num11);
 
-        String valor="Mariano;mariano.pereira@gmail.com;1500";
+        System.out.println("Digite as informações do aluno separado por [;]:");
+        String valor=entrada.nextLine();
         a1.guardaAluno(valor);
         System.out.println(a1);
+        a1.validaCpf();
     }
 }
